@@ -1,4 +1,4 @@
-# transform-default-import-plugin
+# vite-default-opt
 
 A Vite plugin to automatically handle default imports for JavaScript and TypeScript files. It transforms default imports to be compatible with both CommonJS and ES module formats by checking if a module has a `default` export and falling back to the module itself if not.
 
@@ -7,17 +7,17 @@ A Vite plugin to automatically handle default imports for JavaScript and TypeScr
 To install the plugin, simply add it to your project using npm or yarn:
 
 ```bash
-npm install --save-dev transform-default-import-plugin
+npm install --save-dev vite-default-opt
 ```
 or
 ```bash
-yarn add --dev transform-default-import-plugin
+yarn add --dev vite-default-opt
 ```
 
 ## Usage
 ```javascript
 import { defineConfig } from 'vite';
-import transformDefaultImportPlugin from 'transform-default-import-plugin';
+import transformDefaultImportPlugin from 'vite-default-opt';
 
 export default defineConfig({
   plugins: [transformDefaultImportPlugin()],
