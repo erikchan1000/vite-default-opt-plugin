@@ -12,11 +12,15 @@
     "build": "tsc"
   },
   "keywords": [],
-  "author": "",
+  "author": "Erik Chan",
   "license": "ISC",
   "description": "",
   "devDependencies": {
     "typescript": "^5.6.3",
     "vite": "^5.4.10"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erikchan1000/vite-default-opt-plugin.git"
+  },
 }
