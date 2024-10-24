@@ -1,0 +1,22 @@
+{
+  "name": "vite-default-opt",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Optimize default imports in Vite for libraries.",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "outDir": "dist",
+  "include": ["src"],
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
