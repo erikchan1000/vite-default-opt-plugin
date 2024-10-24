@@ -1,6 +1,6 @@
 {
   "name": "vite-default-opt",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "description": "Optimize default imports in Vite for libraries.",
   "main": "dist/index.js",
@@ -22,5 +22,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erikchan1000/vite-default-opt-plugin.git"
-  }
+  },
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ]
 }
