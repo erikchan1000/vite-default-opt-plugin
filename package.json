@@ -1,30 +1,52 @@
 {
   "name": "vite-default-opt",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "type": "module",
-  "description": "Optimize default imports in Vite for libraries.",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "outDir": "dist",
-  "include": ["src"],
-  "scripts": {
-    "build": "tsc"
-  },
-  "keywords": [],
+  "description": "A Vite plugin that rebinds default imports through a CJS/ESM interop fallback using an AST transform, with source maps.",
   "author": "Erik Chan",
   "license": "ISC",
-  "description": "",
-  "devDependencies": {
-    "typescript": "^5.6.3",
-    "vite": "^5.4.10"
-  },
+  "keywords": [
+    "vite",
+    "vite-plugin",
+    "esm",
+    "commonjs",
+    "interop",
+    "default-import"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/erikchan1000/vite-default-opt-plugin.git"
   },
-  "keywords": [
-    "vite",
-    "vite-plugin"
-  ]
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.25.6",
+    "@rollup/pluginutils": "^5.1.0",
+    "magic-string": "^0.30.11"
+  },
+  "peerDependencies": {
+    "vite": ">=4"
+  },
+  "devDependencies": {
+    "@babel/types": "^7.25.6",
+    "@types/node": "^22.5.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vitest": "^2.1.0"
+  }
 }
